@@ -21,6 +21,15 @@
     targets.forEach(function (el) { io.observe(el); });
   }
 
+  /* ---- Hide the small header logo while the big hero logo is visible ---- */
+  var heroLogo = document.querySelector('.hero-logo');
+  var header = document.querySelector('.site-header');
+  if (heroLogo && header && 'IntersectionObserver' in window) {
+    new IntersectionObserver(function (entries) {
+      header.classList.toggle('logo-hidden', entries[0].isIntersecting);
+    }, { rootMargin: '-90px 0px 0px 0px' }).observe(heroLogo);
+  }
+
   /* ---- Contact form: inert until an endpoint exists ---- */
   var form = document.querySelector('.contact-form');
   if (form) {
