@@ -21,14 +21,23 @@
     targets.forEach(function (el) { io.observe(el); });
   }
 
-  /* ---- Hide the small header logo while the big hero logo is visible ---- */
-  var heroLogo = document.querySelector('.hero-logo');
-  var header = document.querySelector('.site-header');
-  if (heroLogo && header && 'IntersectionObserver' in window) {
-    new IntersectionObserver(function (entries) {
-      header.classList.toggle('logo-hidden', entries[0].isIntersecting);
-    }, { rootMargin: '-90px 0px 0px 0px' }).observe(heroLogo);
+  /* ---- Underlines: a phrase on one line gets the drawn underline; a phrase that
+         wraps onto two lines gets one underline per line instead ---- */
+  var hls = document.querySelectorAll('.hl');
+  function fitUnderlines() {
+    hls.forEach(function (el) {
+      el.classList.remove('hl-wrap');
+      var lh = parseFloat(getComputedStyle(el).lineHeight) || el.getBoundingClientRect().height;
+      if (el.getBoundingClientRect().height > lh * 1.4) el.classList.add('hl-wrap');
+    });
   }
+  fitUnderlines();
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(fitUnderlines);
+  var resizeTimer;
+  window.addEventListener('resize', function () {
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(fitUnderlines, 150);
+  });
 
   /* ---- Contact form: inert until an endpoint exists ---- */
   var form = document.querySelector('.contact-form');
