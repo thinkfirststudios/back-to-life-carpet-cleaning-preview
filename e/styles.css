@@ -1,21 +1,21 @@
-/* Back to Life Carpet & Upholstery Cleaning — spec mockup, CONCEPT E (citrus grove)
-   Same layout as A to D. Riverside's own vernacular: the old citrus crate label —
-   grove green, tangerine, slab lettering, sun rays and scalloped awning edges.
+/* Back to Life Carpet & Upholstery Cleaning — spec mockup, CONCEPT E (sunburst)
+   Same layout as A to D. Old fruit-crate label energy without the fruit:
+   deep indigo and tangerine, slab lettering, sun rays and scalloped awning edges.
    Mobile-first: 768px, 1100px. Radius: 8px, held. */
 
 :root {
-  --dark:       #1F4A37;
-  --dark-deep:  #133326;
-  --ink:        #1A2A22;
+  --dark:       #26215C;
+  --dark-deep:  #18153F;
+  --ink:        #1C1A33;
   --accent:     #F5922A;
   --accent-deep:#B4560A;
-  --bg:         #F5F6EB;
-  --bg2:        #E7EBD5;
+  --bg:         #F6F5FA;
+  --bg2:        #EAE8F4;
   --white:      #FFFFFF;
-  --muted:      #4F6358;
-  --soft:       #C8DCCD;
-  --line:       #D6DDC4;
-  --shadow-rgb: 19, 51, 38;
+  --muted:      #58546E;
+  --soft:       #CFCBEA;
+  --line:       #DCD9EC;
+  --shadow-rgb: 24, 21, 63;
 
   --radius: 8px;
   --display: "Zilla Slab", Rockwell, Georgia, serif;
@@ -502,12 +502,11 @@ h1, h2, h3, .price, .price-big span, .step-num, .stat dd, .guarantee, .about-clo
 .hl { color: var(--dark); }
 .band-dark .hl, .job .hl { color: var(--accent); }
 
-/* leaf before each eyebrow */
-.eyebrow::before { width: 14px; height: 14px; border-radius: 0 14px 0 14px; background: var(--dark); }
-.eyebrow-light::before, .band-dark .eyebrow::before { background: var(--accent); }
+/* a small sunburst before each eyebrow */
+.eyebrow::before { width: 16px; height: 16px; border-radius: 50%; background: radial-gradient(circle, var(--accent) 0 34%, transparent 36%), repeating-conic-gradient(var(--accent) 0 12deg, transparent 12deg 30deg); }
 
 /* the one moment: crate-label rays fan open behind the headline */
-.hero-scrim { background: radial-gradient(ellipse 70% 60% at 50% 44%, rgba(31, 74, 55, .74), rgba(19, 51, 38, .90) 75%); }
+.hero-scrim { background: radial-gradient(ellipse 70% 60% at 50% 44%, rgba(38, 33, 92, .74), rgba(24, 21, 63, .90) 75%); }
 .hero-bg { filter: grayscale(1) contrast(1.05); }
 .hero-sun {
   bottom: auto; top: 50%; width: min(170vw, 1700px);
@@ -516,18 +515,17 @@ h1, h2, h3, .price, .price-big span, .step-num, .stat dd, .guarantee, .about-clo
   -webkit-mask: radial-gradient(circle, transparent 0 9%, #000 16%, transparent 50%); mask: radial-gradient(circle, transparent 0 9%, #000 16%, transparent 50%);
 }
 @keyframes sunrise { from { transform: translate(-50%, -50%) rotate(-14deg) scale(.6); opacity: 0; } to { transform: translate(-50%, -50%); opacity: 1; } }
-.hero-lede { color: #E6EFE8; text-wrap: balance; }
+.hero-lede { color: #ECEAF7; text-wrap: balance; }
 .kicker .ico { color: var(--accent); }
 
-/* an orange slice behind the feature photo */
-.sun-disc { background: radial-gradient(circle, transparent 0 53%, var(--accent-deep) 53.4% 58%, transparent 58.4%),
-  repeating-conic-gradient(var(--accent) 0 26deg, #FCD9A8 26deg 30deg);
+/* a tangerine sunburst behind the feature photo */
+.sun-disc { background: repeating-conic-gradient(var(--accent) 0 6deg, transparent 6deg 15deg);
   -webkit-mask: radial-gradient(circle, #000 0 58%, transparent 58.4%); mask: radial-gradient(circle, #000 0 58%, transparent 58.4%); }
 
 .btn-accent, .btn-accent:hover, .call-bar a { color: var(--dark-deep); }
 .btn-accent:hover { background: #E57F14; }
 .stamp-ring text, .stamp-sun { fill: var(--dark-deep); color: var(--dark-deep); }
-.job dd { color: #D9E6DD; }
-.site-footer { color: #D9E6DD; }
-.field input, .field select, .field textarea { border-color: #7E9186; }
+.job dd { color: #DEDBF0; }
+.site-footer { color: #DEDBF0; }
+.field input, .field select, .field textarea { border-color: #8783A0; }
 .price-card-dark .price-big span { color: var(--accent); }
