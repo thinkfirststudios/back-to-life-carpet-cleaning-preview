@@ -1,0 +1,585 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Back to Life Carpet &amp; Upholstery Cleaning · Riverside, CA</title>
+  <meta name="description" content="Family owned and operated carpet, upholstery, tile and stone, rug and pet stain cleaning in Riverside, California. Call (951) 567-3513.">
+  <meta name="robots" content="noindex, nofollow">
+  <!-- CONCEPT D (upholstery house) — spec mockup for a prospect. Not launched. Same layout as Concepts A and B; new palette, type and proposed logo. Many details are illustrative — see HANDOFF-FOR-JOHN.md §0. -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Gloock&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script>document.documentElement.classList.add('js');</script>
+</head>
+<body>
+  <!-- ============ SVG sprite: logo + icons ============ -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+    <!-- Logo: CONCEPT D — a proposed refresh (stitched monogram seal). Not their mark; for discussion only. -->
+    <symbol id="logo" viewBox="0 0 300 72">
+      <circle cx="34" cy="36" r="31" fill="#5A1A26"/>
+      <circle cx="34" cy="36" r="25.5" fill="none" stroke="#EBB9A7" stroke-width="1.6" stroke-dasharray="4 3"/>
+      <text x="34" y="44.5" text-anchor="middle" font-family="'Gloock', Georgia, serif" font-size="24" fill="#F5F0F1">BL</text>
+      <text x="78" y="42" font-family="'Gloock', Georgia, serif" font-size="33" fill="currentColor">Back to Life</text>
+      <text x="79" y="61" font-family="'Hanken Grotesk', system-ui, sans-serif" font-weight="600" font-size="11.6" letter-spacing=".5" fill="currentColor" opacity=".72">Carpet &amp; Upholstery Cleaning</text>
+    </symbol>
+    <symbol id="i-sun" viewBox="0 0 24 24"><path fill="currentColor" d="M4 17a8 8 0 0 1 16 0z"/><g stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 3.5v3"/><path d="M4.9 6.4l2.1 2.1"/><path d="M19.1 6.4 17 8.5"/><path d="M1.5 13h2.5"/><path d="M20 13h2.5"/></g><path fill="currentColor" d="M2 19h20v2H2z"/></symbol>
+    <symbol id="i-phone" viewBox="0 0 24 24"><path fill="currentColor" d="M6.6 10.8a15.2 15.2 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1z"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M13 6l6 6-6 6"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M7.5 12.3l3 3 6-6.3"/></symbol>
+    <symbol id="i-chev" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" d="M7 10l5 5 5-5"/></symbol>
+    <symbol id="i-home" viewBox="0 0 48 48"><g fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M6 22 24 7l18 15"/><path d="M11 18v23h26V18"/><circle cx="19" cy="25" r="3"/><circle cx="29" cy="25" r="3"/><path d="M14 38c0-5 2-8 5-8s5 3 5 8M24 38c0-5 2-8 5-8s5 3 5 8"/></g></symbol>
+    <symbol id="i-truck" viewBox="0 0 48 48"><g fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h24v22H4z"/><path d="M28 19h9l7 8v7H28"/><circle cx="12" cy="36" r="4"/><circle cx="36" cy="36" r="4"/><path d="M10 18c3 0 3 4 6 4s3-4 6-4"/></g></symbol>
+    <symbol id="i-clock" viewBox="0 0 48 48"><g fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="24" cy="25" r="16"/><path d="M24 15v10l7 5"/><path d="M19 5h10"/></g></symbol>
+    <symbol id="i-redo" viewBox="0 0 48 48"><g fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M38 24a14 14 0 1 1-5-10.7"/><path d="M34 6v8h-8"/><path d="M18 24l4 4 8-8"/></g></symbol>
+  </svg>
+
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- ============ HEADER — floating white bar ============ -->
+  <header class="site-header">
+    <div class="wrap">
+      <div class="header-bar">
+        <a class="brand" href="#top" aria-label="Back to Life Carpet and Upholstery Cleaning, back to top">
+          <svg class="logo" viewBox="0 0 300 72" aria-hidden="true"><use href="#logo"/></svg>
+        </a>
+        <nav class="site-nav" aria-label="Main">
+          <ul>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#how">How it works</a></li>
+            <li><a href="#prices">Prices</a></li>
+            <li><a href="#faq">FAQ</a></li>
+          </ul>
+        </nav>
+        <div class="header-actions">
+          <a class="btn btn-dark btn-sm header-quote" href="#contact">Get a quote <svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+          <a class="btn btn-accent btn-sm" href="tel:+19515673513"><svg class="ico" aria-hidden="true"><use href="#i-phone"/></svg><span class="hide-sm">(951) 567-3513</span><span class="show-sm">Call</span></a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- ============ HERO ============ -->
+    <section class="hero band-dark" id="top" aria-labelledby="hero-title">
+      <!-- PLACEHOLDER stock (Unsplash) — greyscale under an oxblood overlay -->
+      <img class="hero-bg" src="../assets/PLACEHOLDER-hero-room.jpg" width="2400" height="1600" fetchpriority="high"
+           alt="" aria-hidden="true">
+      <div class="hero-scrim" aria-hidden="true"></div>
+      <div class="hero-sun" aria-hidden="true"></div>
+      <div class="wrap hero-inner">
+        <p class="kicker reveal"><svg class="ico" aria-hidden="true"><use href="#i-sun"/></svg> Family owned &amp; operated · Riverside, CA</p>
+        <h1 id="hero-title" class="reveal">Riverside floors,<br class="br-lg"> brought <span class="hl">back to life.</span></h1>
+        <p class="hero-lede reveal">Carpet, upholstery, tile and stone, rugs and pet stains — cleaned properly by David and Jennifer Servantez’s family business.</p>
+        <div class="hero-ctas reveal">
+          <a class="btn btn-accent" href="tel:+19515673513"><svg class="ico" aria-hidden="true"><use href="#i-phone"/></svg> Call (951) 567-3513</a>
+          <a class="btn btn-light" href="#contact">Get a quote <svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+        </div>
+      </div>
+      <div class="stamp" aria-hidden="true">
+        <svg viewBox="0 0 120 120" class="stamp-ring">
+          <defs><path id="stamp-path" d="M60 60 m-44 0 a44 44 0 1 1 88 0 a44 44 0 1 1 -88 0"/></defs>
+          <text><textPath href="#stamp-path" startOffset="0" textLength="272" lengthAdjust="spacing">FAMILY OWNED · FAMILY OPERATED ·</textPath></text>
+        </svg>
+        <svg class="stamp-sun" viewBox="0 0 24 24"><use href="#i-sun"/></svg>
+      </div>
+      <div class="edge edge-bottom" style="--edge: var(--bg)" aria-hidden="true"></div>
+    </section>
+
+    <!-- ============ FEATURES ============ -->
+    <section class="features band-light" aria-label="Why Back to Life">
+      <div class="wrap features-grid">
+        <div class="feature reveal">
+          <svg class="feature-ico" aria-hidden="true"><use href="#i-home"/></svg>
+          <h2>Family owned &amp; operated</h2>
+          <p>It is David and Jennifer Servantez’s business, and their family does the work.</p>
+        </div>
+        <div class="feature reveal">
+          <svg class="feature-ico" aria-hidden="true"><use href="#i-truck"/></svg>
+          <h2>Truck-mounted hot water</h2>
+          <p>Around 230°F, with the soil pulled back out to the truck.</p>
+        </div>
+        <figure class="features-media reveal">
+          <div class="sun-disc" aria-hidden="true"></div>
+          <div class="frame">
+            <!-- PLACEHOLDER stock (Pexels 6195273), coveralls recoloured to oxblood -->
+            <img src="../assets/PLACEHOLDER-feature-clean-d.jpg" width="1400" height="933" loading="lazy"
+                 alt="A technician in work coveralls cleaning a living-room floor beside a grey sofa">
+
+          </div>
+        </figure>
+        <div class="feature reveal">
+          <svg class="feature-ico" aria-hidden="true"><use href="#i-clock"/></svg>
+          <h2>Walk on it in 2 hours</h2>
+          <p>Fully dry in four to six, with air movers left running.</p>
+        </div>
+        <div class="feature reveal">
+          <svg class="feature-ico" aria-hidden="true"><use href="#i-redo"/></svg>
+          <h2>14-day spot redo</h2>
+          <p>If a spot comes back within 14 days, we come back. No charge.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ MARQUEE — real services only ============ -->
+    <section class="marquee band-dark" aria-label="Services">
+      <div class="edge edge-top" style="--edge: var(--bg)" aria-hidden="true"></div>
+      <ul class="visually-hidden">
+        <li>Carpet</li><li>Upholstery</li><li>Tile and stone</li><li>Rugs</li><li>Pet stains</li>
+      </ul>
+      <div class="marquee-track" aria-hidden="true">
+        <div class="marquee-group">
+          <span>Carpet</span><svg class="ico"><use href="#i-sun"/></svg>
+          <span>Upholstery</span><svg class="ico"><use href="#i-sun"/></svg>
+          <span>Tile &amp; Stone</span><svg class="ico"><use href="#i-sun"/></svg>
+          <span>Rugs</span><svg class="ico"><use href="#i-sun"/></svg>
+          <span>Pet Stains</span><svg class="ico"><use href="#i-sun"/></svg>
+          <span>Family Owned</span><svg class="ico"><use href="#i-sun"/></svg>
+        </div>
+        <div class="marquee-group">
+          <span>Carpet</span><svg class="ico"><use href="#i-sun"/></svg>
+          <span>Upholstery</span><svg class="ico"><use href="#i-sun"/></svg>
+          <span>Tile &amp; Stone</span><svg class="ico"><use href="#i-sun"/></svg>
+          <span>Rugs</span><svg class="ico"><use href="#i-sun"/></svg>
+          <span>Pet Stains</span><svg class="ico"><use href="#i-sun"/></svg>
+          <span>Family Owned</span><svg class="ico"><use href="#i-sun"/></svg>
+        </div>
+      </div>
+      <div class="edge edge-bottom" style="--edge: var(--bg)" aria-hidden="true"></div>
+    </section>
+
+    <!-- ============ SERVICES — the five on the card ============ -->
+    <section class="section band-light" id="services" aria-labelledby="services-title">
+      <div class="wrap">
+        <header class="section-head center reveal">
+          <p class="eyebrow">Services</p>
+          <h2 id="services-title">Five things on the card.<br> <span class="hl">All done properly.</span></h2>
+          <p class="section-lede">Carpet, upholstery, tile and stone, rugs and pet stains. Prices are written down, and we confirm your total before any work starts.</p>
+        </header>
+
+        <div class="service-grid">
+          <article class="service service-lg reveal">
+            <div class="frame frame-43"><img src="../assets/PLACEHOLDER-service-carpet.jpg" width="1200" height="800" loading="lazy" alt="Close-up of dense tan carpet pile, shallow focus"></div>
+            <div class="service-body">
+              <h3>Carpet</h3>
+              <p>Wall-to-wall and stairs. Pre-treated, brushed, then rinsed with hot water and pulled back out to the truck.</p>
+              <div class="service-foot"><span class="price">from $45 <small>a room</small></span><a class="round-btn" href="#prices" aria-label="Carpet prices"><svg aria-hidden="true"><use href="#i-arrow"/></svg></a></div>
+            </div>
+          </article>
+
+          <article class="service service-lg reveal">
+            <div class="frame frame-43"><img src="../assets/PLACEHOLDER-service-upholstery.jpg" width="1200" height="1800" loading="lazy" alt="The arm and seat of a textured oatmeal fabric sofa in soft window light"></div>
+            <div class="service-body">
+              <h3>Upholstery</h3>
+              <p>Sofas, sectionals and armchairs, cleaned where they sit. We check the fabric first, because not every fabric takes the same treatment.</p>
+              <div class="service-foot"><span class="price">from $45 <small>a chair</small></span><a class="round-btn" href="#prices" aria-label="Upholstery prices"><svg aria-hidden="true"><use href="#i-arrow"/></svg></a></div>
+            </div>
+          </article>
+
+          <article class="service reveal">
+            <div class="frame frame-43"><img src="../assets/PLACEHOLDER-service-tile.jpg" width="1200" height="1200" loading="lazy" alt="Warm-toned stone-look floor tile laid on the diagonal, grout lines visible"></div>
+            <div class="service-body">
+              <h3>Tile &amp; stone</h3>
+              <p>Kitchens, bathrooms and entries. High-pressure cleaning into the grout lines, where a mop only moves the dirt around.</p>
+              <div class="service-foot"><span class="price">$0.85 <small>per sq ft</small></span><a class="round-btn" href="#prices" aria-label="Tile and stone prices"><svg aria-hidden="true"><use href="#i-arrow"/></svg></a></div>
+            </div>
+          </article>
+
+          <article class="service reveal">
+            <div class="frame frame-43"><img src="../assets/PLACEHOLDER-service-rugs.jpg" width="1200" height="1800" loading="lazy" alt="A patterned area rug rolled up on top of another rug"></div>
+            <div class="service-body">
+              <h3>Rugs</h3>
+              <p>Area rugs and wool rugs, taken in and cleaned in-plant when the fibre needs more care than a living-room floor allows.</p>
+              <div class="service-foot"><span class="price">from $3.50 <small>per sq ft</small></span><a class="round-btn" href="#prices" aria-label="Rug prices"><svg aria-hidden="true"><use href="#i-arrow"/></svg></a></div>
+            </div>
+          </article>
+
+          <article class="service reveal">
+            <div class="frame frame-43"><img src="../assets/PLACEHOLDER-service-pet.jpg" width="1200" height="796" loading="lazy" alt="A spaniel resting on a light carpet in bands of sunlight"></div>
+            <div class="service-body">
+              <h3>Pet stains</h3>
+              <p>Every affected area found and treated on its own — not just the one you can see — before the room is cleaned.</p>
+              <div class="service-foot"><span class="price">$35 <small>per area</small></span><a class="round-btn" href="#prices" aria-label="Pet stain prices"><svg aria-hidden="true"><use href="#i-arrow"/></svg></a></div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ HOW IT WORKS — five staggered step cards ============ -->
+    <section class="how band-dark" id="how" aria-labelledby="how-title">
+      <div class="edge edge-top" style="--edge: var(--bg)" aria-hidden="true"></div>
+      <div class="wrap">
+        <header class="section-head reveal">
+          <p class="eyebrow eyebrow-light">How it works</p>
+          <h2 id="how-title">Five passes, <span class="hl">start to finish.</span></h2>
+          <p class="section-lede">What actually happens in your house, in order. Nothing skipped to save time.</p>
+        </header>
+
+        <ol class="steps">
+          <li class="step reveal">
+            <span class="step-num" aria-hidden="true">01</span>
+            <div class="step-card">
+              <h3><span class="visually-hidden">Step 1: </span>Walk the room</h3>
+              <p>We look at the floor before we quote: the fibre, the traffic lanes, and what the marks really are.</p>
+              <div class="step-img"><img src="../assets/PLACEHOLDER-pass-01.jpg" width="1400" height="933" loading="lazy" alt="A floor-level view across carpet pile in low raking light"></div>
+            </div>
+          </li>
+          <li class="step reveal">
+            <span class="step-num" aria-hidden="true">02</span>
+            <div class="step-card">
+              <h3><span class="visually-hidden">Step 2: </span>Treat the marks</h3>
+              <p>Every mark gets its own pre-treatment, left for ten minutes before any machine touches it.</p>
+              <div class="step-img step-img-low"><img src="../assets/PLACEHOLDER-pass-02.jpg" width="1400" height="2100" loading="lazy" alt="Someone on hands and knees working a cloth over one spot at floor level, beside a patterned rug"></div>
+            </div>
+          </li>
+          <li class="step reveal">
+            <span class="step-num" aria-hidden="true">03</span>
+            <div class="step-card">
+              <h3><span class="visually-hidden">Step 3: </span>Pull it out</h3>
+              <p>Brushes loosen the soil, then water at around 230°F rinses it out and back to the truck.</p>
+              <div class="step-img"><img src="../assets/PLACEHOLDER-ba-sofa-before.jpg" width="1000" height="667" loading="lazy" alt="A grey fabric sofa seat being worked over with a rotary brush"></div>
+            </div>
+          </li>
+          <li class="step reveal">
+            <span class="step-num" aria-hidden="true">04</span>
+            <div class="step-card">
+              <h3><span class="visually-hidden">Step 4: </span>Set the pile</h3>
+              <p>A grooming rake stands the fibres up, so the carpet dries upright instead of matted flat.</p>
+              <div class="step-img"><img src="../assets/PLACEHOLDER-pass-04.jpg" width="1400" height="932" loading="lazy" alt="Carpet pile standing upright and even across the frame"></div>
+            </div>
+          </li>
+          <li class="step reveal">
+            <span class="step-num" aria-hidden="true">05</span>
+            <div class="step-card">
+              <h3><span class="visually-hidden">Step 5: </span>Leave it drying</h3>
+              <p>Air movers stay running. Walk on it in about two hours; fully dry in four to six.</p>
+              <div class="step-img"><img src="../assets/PLACEHOLDER-pass-05.jpg" width="1400" height="935" loading="lazy" alt="An empty carpeted room with sun coming through a sliding glass door"></div>
+            </div>
+          </li>
+        </ol>
+      </div>
+      <div class="edge edge-bottom" style="--edge: var(--bg)" aria-hidden="true"></div>
+    </section>
+
+    <!-- ============ BEFORE / AFTER — static splits, honestly labelled ============ -->
+    <section class="section band-light" id="before-after" aria-labelledby="ba-title">
+      <div class="wrap">
+        <header class="section-head center reveal">
+          <p class="eyebrow">Before &amp; after</p>
+          <h2 id="ba-title">What the soil looks like,<br> <span class="hl">and what it should.</span></h2>
+        </header>
+
+        <div class="ba-grid">
+          <figure class="ba reveal">
+            <div class="ba-pair">
+              <div class="ba-half"><img src="../assets/PLACEHOLDER-ba-stairs-before.jpg" width="1000" height="667" loading="lazy" alt="Worn red stair carpet with grit ground into the treads"><span class="ba-label">Before</span></div>
+              <div class="ba-half"><img src="../assets/PLACEHOLDER-ba-stairs-after.jpg" width="1000" height="645" loading="lazy" alt="Clean red stair carpet with crisp, even pile on the nosings"><span class="ba-label ba-label-after">After</span></div>
+            </div>
+            <figcaption>Stair carpet, ground-in soil on the treads and nosings</figcaption>
+          </figure>
+          <figure class="ba reveal">
+            <div class="ba-pair">
+              <div class="ba-half"><img src="../assets/PLACEHOLDER-ba-tile-before.jpg" width="1000" height="667" loading="lazy" alt="Grey floor tile with a dull surface film and darkened grout lines"><span class="ba-label">Before</span></div>
+              <div class="ba-half"><img src="../assets/PLACEHOLDER-ba-tile-after.jpg" width="1000" height="667" loading="lazy" alt="Clean hexagonal floor tile with light, even grout lines"><span class="ba-label ba-label-after">After</span></div>
+            </div>
+            <figcaption>Floor tile, surface film and grey grout</figcaption>
+          </figure>
+          <figure class="ba reveal">
+            <div class="ba-pair">
+              <div class="ba-half"><img src="../assets/PLACEHOLDER-ba-sofa-before.jpg" width="1000" height="667" loading="lazy" alt="A grey woven-fabric sofa seat being worked over with a rotary brush"><span class="ba-label">Before</span></div>
+              <div class="ba-half"><img src="../assets/PLACEHOLDER-ba-sofa-after.jpg" width="1000" height="750" loading="lazy" alt="A clean grey woven-fabric sofa with even colour across the cushions"><span class="ba-label ba-label-after">After</span></div>
+            </div>
+            <figcaption>Woven fabric sofa, body soil on the seat cushions</figcaption>
+          </figure>
+        </div>
+        <p class="ba-note">These are example photographs of the surfaces and soil types we work on. They are not photographs of our own jobs.</p>
+      </div>
+    </section>
+
+    <!-- ============ PRICING — three cards, no ranking flags ============ -->
+    <section class="section band-light2" id="prices" aria-labelledby="prices-title">
+      <div class="wrap">
+        <header class="section-head center reveal">
+          <p class="eyebrow">Prices</p>
+          <h2 id="prices-title">Plain prices,<br> <span class="hl">written down.</span></h2>
+          <p class="section-lede">Our standard prices. We confirm your total on the walk-through, before any work starts.</p>
+        </header>
+
+        <div class="price-grid">
+          <article class="price-card reveal">
+            <h3>Upholstery</h3>
+            <p class="price-big"><span>$89</span> per sofa</p>
+            <ul class="price-list">
+              <li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg><span>Sectional</span><b>from $139</b></li>
+              <li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg><span>Armchair</span><b>$45</b></li>
+              <li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg><span>Fabric checked first</span><b>included</b></li>
+            </ul>
+            <a class="btn btn-dark btn-block" href="#contact">Get an upholstery quote</a>
+          </article>
+
+          <article class="price-card price-card-dark reveal">
+            <h3>Carpet</h3>
+            <p class="price-big"><span>$45</span> per room</p>
+            <p class="price-sub">Three-room minimum</p>
+            <ul class="price-list">
+              <li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg><span>Whole house, up to 1,800 sq ft</span><b>$219</b></li>
+              <li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg><span>Stairs</span><b>$2.50 / step</b></li>
+              <li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg><span>Pet stain treatment</span><b>$35 / area</b></li>
+            </ul>
+            <a class="btn btn-accent btn-block" href="#contact">Get a carpet quote</a>
+          </article>
+
+          <article class="price-card reveal">
+            <h3>Tile, stone &amp; rugs</h3>
+            <p class="price-big"><span>$0.85</span> per sq ft</p>
+            <p class="price-sub">Tile and stone</p>
+            <ul class="price-list">
+              <li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg><span>Area rugs, wool, in-plant</span><b>from $3.50 / sq ft</b></li>
+              <li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg><span>Grout lines worked individually</span><b>included</b></li>
+            </ul>
+            <a class="btn btn-dark btn-block" href="#contact">Get a tile or rug quote</a>
+          </article>
+        </div>
+
+        <div class="price-foot reveal">
+          <p class="price-min">Every visit has a $135 minimum service call.</p>
+          <p class="guarantee">If a spot comes back within 14 days, we come back and redo it. No charge.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ STAT BAND — operational figures only ============ -->
+    <section class="stats band-dark" aria-label="The business in four figures">
+      <div class="edge edge-top" style="--edge: var(--bg2)" aria-hidden="true"></div>
+      <dl class="wrap stat-grid">
+        <div class="stat reveal"><dd>Since 2011</dd><dt>Family owned &amp; operated</dt></div>
+        <div class="stat reveal"><dd>2 trucks</dd><dt>Truck-mounted hot water</dt></div>
+        <div class="stat reveal"><dd>4–6 hr</dd><dt>Fully dry</dt></div>
+        <div class="stat reveal"><dd>14-day</dd><dt>Spot redo, no charge</dt></div>
+      </dl>
+      <div class="edge edge-bottom" style="--edge: var(--bg)" aria-hidden="true"></div>
+    </section>
+
+    <!-- ============ WHAT USUALLY HAPPENS — company voice, no quotes, no names ============ -->
+    <section class="section band-light" id="typical-jobs" aria-labelledby="jobs-title">
+      <div class="wrap">
+        <header class="section-head center reveal">
+          <p class="eyebrow">What usually happens</p>
+          <h2 id="jobs-title">Three typical jobs,<br> <span class="hl">and what to expect.</span></h2>
+        </header>
+
+        <div class="jobs">
+          <article class="job reveal">
+            <h3>A pet accident in a rental, before the walkthrough</h3>
+            <dl>
+              <dt>The situation</dt>
+              <dd>The walkthrough is on Friday, and there is a pet accident in the back bedroom that has been there longer than anyone wants to say.</dd>
+              <dt>What we do</dt>
+              <dd>Find every affected area, not just the visible one, and treat each separately before the room is extracted. Priced per area, so you know the number first.</dd>
+              <dt>What to expect</dt>
+              <dd>Most marks lift completely. An older accident that reached the pad can leave a shadow, and we will tell you on the walk-through if that is likely.</dd>
+            </dl>
+          </article>
+          <article class="job reveal">
+            <h3>A sectional two kids grew up on</h3>
+            <dl>
+              <dt>The situation</dt>
+              <dd>The seat cushions are darker than the arms, and one corner has a long history of juice.</dd>
+              <dt>What we do</dt>
+              <dd>Read the fabric code, test an area nobody sees, then pre-treat the seats and arms before extracting the whole piece.</dd>
+              <dt>What to expect</dt>
+              <dd>The colour usually evens out. Some old stains have set into the fibre and will lighten rather than disappear, and we say which before we start.</dd>
+            </dl>
+          </article>
+          <article class="job reveal">
+            <h3>Grout that went grey and looks like it needs replacing</h3>
+            <dl>
+              <dt>The situation</dt>
+              <dd>Kitchen tile where the grout has gone from light to grey, and the whole floor looks tired enough to rip out.</dd>
+              <dt>What we do</dt>
+              <dd>High-pressure cleaning works the grout lines and recovers the dirty water as it goes, instead of leaving it to settle back in.</dd>
+              <dt>What to expect</dt>
+              <dd>Often the grout comes back close to its original colour. Cracked or missing grout is a repair, not a clean, and we will say so.</dd>
+            </dl>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ ABOUT ============ -->
+    <section class="section band-light2" id="about" aria-labelledby="about-title">
+      <div class="wrap about-inner">
+        <figure class="about-media reveal">
+          <div class="sun-disc sun-disc-lg" aria-hidden="true"></div>
+          <div class="frame"><img src="../assets/PLACEHOLDER-about.jpg" width="1200" height="1642" loading="lazy" alt="Light from an open door falling across a dark carpeted floor"></div>
+        </figure>
+        <div class="about-copy reveal">
+          <p class="eyebrow">Meet the family</p>
+          <h2 id="about-title">David and Jennifer’s business.<br> <span class="hl">Family owned and operated.</span></h2>
+          <p>Back to Life is run by David and Jennifer Servantez, and it has been cleaning floors around Riverside since 2011. It is family owned and family operated, with two truck-mounted hot-water units on the road.</p>
+          <p class="about-close">Some floors are worth cleaning and some are worth replacing. We will tell you which.</p>
+          <a class="btn btn-accent" href="tel:+19515673513"><svg class="ico" aria-hidden="true"><use href="#i-phone"/></svg> Call (951) 567-3513</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ FAQ — details/summary works without JS ============ -->
+    <section class="section band-light" id="faq" aria-labelledby="faq-title">
+      <div class="wrap faq-inner">
+        <header class="faq-head reveal">
+          <p class="eyebrow">FAQ</p>
+          <h2 id="faq-title">Straight <span class="hl">answers.</span></h2>
+          <p>Something else? Call <a href="tel:+19515673513">(951) 567-3513</a> and ask.</p>
+        </header>
+
+        <div class="faq-list">
+          <details class="faq-item reveal" open>
+            <summary>What does it cost?<span class="faq-chev" aria-hidden="true"><svg><use href="#i-chev"/></svg></span></summary>
+            <p>Carpet is $45 a room with a three-room minimum, and every visit has a $135 minimum service call. The full list is in <a href="#prices">Prices</a>, and we confirm the total on the walk-through before any work starts.</p>
+          </details>
+          <details class="faq-item reveal">
+            <summary>How long until I can walk on it?<span class="faq-chev" aria-hidden="true"><svg><use href="#i-chev"/></svg></span></summary>
+            <p>About two hours. It is fully dry in four to six, and we leave air movers running to get it there.</p>
+          </details>
+          <details class="faq-item reveal">
+            <summary>Will the marks come back?<span class="faq-chev" aria-hidden="true"><svg><use href="#i-chev"/></svg></span></summary>
+            <p>Sometimes a spill that went deep into the pile wicks back up as the carpet dries. That is what the 14-day redo is for: if a spot comes back within 14 days, we come back and redo it, at no charge.</p>
+          </details>
+          <details class="faq-item reveal">
+            <summary>Do I need to move the furniture?<span class="faq-chev" aria-hidden="true"><svg><use href="#i-chev"/></svg></span></summary>
+            <p>Clear the small things off the floor — shoes, toys, anything fragile — and we will talk through the larger pieces on the walk-through.</p>
+          </details>
+          <details class="faq-item reveal">
+            <summary>What about pets and kids?<span class="faq-chev" aria-hidden="true"><svg><use href="#i-chev"/></svg></span></summary>
+            <p>Extraction is a rinse. The pre-treatment and the soil are flushed out of the pile and pulled back to the truck, rather than left sitting in the carpet. It is walkable in about two hours and dry in four to six, and keeping pets and kids off it until then is the simplest approach. If you have a question about a particular product, ask us on the walk-through.</p>
+          </details>
+          <details class="faq-item reveal">
+            <summary>Is it worth cleaning, or should I replace it?<span class="faq-chev" aria-hidden="true"><svg><use href="#i-chev"/></svg></span></summary>
+            <p>Walk the room with us. Worn-through backing, carpet coming away from its backing, and pile crushed flat in the traffic lanes do not come back with cleaning, and we will say so. Soil and most stains usually do. If it is not worth cleaning, we will not sell you a clean.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ SERVICE AREA ============ -->
+    <section class="section band-light2" id="area" aria-labelledby="area-title">
+      <div class="wrap">
+        <header class="section-head center reveal">
+          <p class="eyebrow">Where we work</p>
+          <h2 id="area-title">Riverside,<br> <span class="hl">and the cities around it.</span></h2>
+        </header>
+        <div class="area-cols reveal">
+          <div class="area-card">
+            <h3>Cities</h3>
+            <ul><li>Riverside</li><li>Moreno Valley</li><li>Corona</li><li>Jurupa Valley</li><li>Norco</li><li>Eastvale</li></ul>
+          </div>
+          <div class="area-card">
+            <h3>In Riverside</h3>
+            <ul><li>Canyon Crest</li><li>Victoria</li><li>The Wood Streets</li><li>Orangecrest</li><li>Hawarden Hills</li><li>Alessandro Heights</li></ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CONTACT ============ -->
+    <section class="contact band-dark" id="contact" aria-labelledby="contact-title">
+      <div class="edge edge-top" style="--edge: var(--bg2)" aria-hidden="true"></div>
+      <div class="wrap contact-inner">
+        <div class="contact-intro reveal">
+          <p class="eyebrow eyebrow-light">Get a quote</p>
+          <h2 id="contact-title">Tell us about <span class="hl">the floor.</span></h2>
+          <p>Send a few details and we will get back to you with a time to walk the room. Or skip the form and call.</p>
+          <a class="btn btn-accent" href="tel:+19515673513"><svg class="ico" aria-hidden="true"><use href="#i-phone"/></svg> Call (951) 567-3513</a>
+          <dl class="hours">
+            <div><dt>Monday–Friday</dt><dd>8:00 am – 6:00 pm</dd></div>
+            <div><dt>Saturday</dt><dd>8:00 am – 2:00 pm</dd></div>
+            <div><dt>Sunday</dt><dd>Closed</dd></div>
+          </dl>
+        </div>
+
+        <!-- no endpoint yet — Alex to wire -->
+        <form class="contact-form reveal" action="#" method="post" novalidate>
+          <div class="field">
+            <label for="f-name">Name</label>
+            <input id="f-name" name="name" type="text" autocomplete="name" required>
+          </div>
+          <div class="field-row">
+            <div class="field">
+              <label for="f-phone">Phone</label>
+              <input id="f-phone" name="phone" type="tel" autocomplete="tel" required>
+            </div>
+            <div class="field">
+              <label for="f-email">Email</label>
+              <input id="f-email" name="email" type="email" autocomplete="email">
+            </div>
+          </div>
+          <div class="field-row">
+            <div class="field">
+              <label for="f-surface">What needs cleaning</label>
+              <select id="f-surface" name="surface">
+                <option value="carpet">Carpet</option>
+                <option value="upholstery">Upholstery</option>
+                <option value="tile-stone">Tile and stone</option>
+                <option value="rugs">Rugs</option>
+                <option value="pet-stains">Pet stains</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="f-rooms">Rooms</label>
+              <input id="f-rooms" name="rooms" type="number" min="1" inputmode="numeric">
+            </div>
+          </div>
+          <div class="field">
+            <label for="f-message">Anything we should know</label>
+            <textarea id="f-message" name="message" rows="4"></textarea>
+          </div>
+          <button class="btn btn-dark" type="submit">Send it over <svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></button>
+          <p class="form-status" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="site-footer">
+    <div class="wrap footer-inner">
+      <div class="footer-brand">
+        <div class="footer-logo"><svg class="logo" viewBox="0 0 300 72" role="img" aria-label="Back to Life Carpet and Upholstery Cleaning"><use href="#logo"/></svg></div>
+        <p>Family owned &amp; operated · Riverside, California</p>
+        <a class="footer-phone" href="tel:+19515673513">(951) 567-3513</a>
+        <p class="footer-owners">David &amp; Jennifer Servantez, owners</p>
+      </div>
+      <div>
+        <h2 class="footer-head">Services</h2>
+        <ul>
+          <li><a href="#services">Carpet</a></li>
+          <li><a href="#services">Upholstery</a></li>
+          <li><a href="#services">Tile &amp; stone</a></li>
+          <li><a href="#services">Rugs</a></li>
+          <li><a href="#services">Pet stains</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2 class="footer-head">Hours</h2>
+        <dl class="footer-hours">
+          <div><dt>Mon–Fri</dt><dd>8:00 am – 6:00 pm</dd></div>
+          <div><dt>Saturday</dt><dd>8:00 am – 2:00 pm</dd></div>
+          <div><dt>Sunday</dt><dd>Closed</dd></div>
+        </dl>
+      </div>
+    </div>
+    <div class="wrap footer-base"><p>© 2026 Back to Life Carpet &amp; Upholstery Cleaning</p></div>
+  </footer>
+
+  <!-- ============ STICKY MOBILE CALL BAR ============ -->
+  <div class="call-bar">
+    <a href="tel:+19515673513"><svg class="ico" aria-hidden="true"><use href="#i-phone"/></svg> Call (951) 567-3513</a>
+  </div>
+
+  <script src="../script.js"></script>
+</body>
+</html>
